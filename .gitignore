@@ -1,6 +1,9 @@
-sources.txt
 doc/
 pcb_cao/gerber/
 3d_cao/*.SLDPRT
 3d_cao/*.SLDASM
 3d_cao/*.otf
+
+platformio.ini
+.pio
+.vscode/
