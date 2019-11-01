@@ -100,7 +100,7 @@ U 1 1 5C3BE23C
 P 1450 2350
 F 0 "J2" H 1370 2025 50  0000 C CNN
 F 1 "Conn_01x02" H 1370 2116 50  0000 C CNN
-F 2 "onnector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 1450 2350 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1450 2350 50  0001 C CNN
 F 3 "~" H 1450 2350 50  0001 C CNN
 	1    1450 2350
 	-1   0    0    1   
@@ -111,7 +111,7 @@ U 1 1 5C3BE49A
 P 1450 2850
 F 0 "J3" H 1370 2525 50  0000 C CNN
 F 1 "Conn_01x02" H 1370 2616 50  0000 C CNN
-F 2 "onnector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 1450 2850 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1450 2850 50  0001 C CNN
 F 3 "~" H 1450 2850 50  0001 C CNN
 	1    1450 2850
 	-1   0    0    1   
@@ -122,7 +122,7 @@ U 1 1 5C3BE4CA
 P 1450 1900
 F 0 "J1" H 1370 1575 50  0000 C CNN
 F 1 "Conn_01x02" H 1370 1666 50  0000 C CNN
-F 2 "onnector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 1450 1900 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1450 1900 50  0001 C CNN
 F 3 "~" H 1450 1900 50  0001 C CNN
 	1    1450 1900
 	-1   0    0    1   
@@ -133,7 +133,7 @@ U 1 1 5C3BE51E
 P 1450 3300
 F 0 "J4" H 1370 2975 50  0000 C CNN
 F 1 "Conn_01x02" H 1370 3066 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 1450 3300 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1450 3300 50  0001 C CNN
 F 3 "~" H 1450 3300 50  0001 C CNN
 	1    1450 3300
 	-1   0    0    1   
@@ -278,7 +278,7 @@ U 1 1 5C3E5786
 P 4900 5400
 F 0 "J10" H 4980 5392 50  0000 L CNN
 F 1 "Conn_01x02" H 4980 5301 50  0000 L CNN
-F 2 "onnector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 4900 5400 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4900 5400 50  0001 C CNN
 F 3 "~" H 4900 5400 50  0001 C CNN
 	1    4900 5400
 	-1   0    0    1   
@@ -546,7 +546,7 @@ U 1 1 5C419A40
 P 4900 6100
 F 0 "J11" H 4980 6092 50  0000 L CNN
 F 1 "Conn_01x02" H 4980 6001 50  0000 L CNN
-F 2 "onnector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 4900 6100 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4900 6100 50  0001 C CNN
 F 3 "~" H 4900 6100 50  0001 C CNN
 	1    4900 6100
 	-1   0    0    1   
