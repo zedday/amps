@@ -5,7 +5,11 @@
  * @ Create Time: 2019-10-24 23:05:31
  * @ Description: Control the screen and display the measures from the current sensors
  */
-#include <LiquidCrystal.h>
+#include <Wire.h>
+#include <hd44780.h>                       // Main hd44780 header
+#include <hd44780ioClass/hd44780_I2Cexp.h> // I2C expander i/o class header
+
+#define VERSION "0.1"
 
 // Pins constants
 const uint8_t BUTTON_PREVIOUS = 6;
@@ -23,8 +27,9 @@ const String HEADER_3_3V = "2 - 3.3V Line";
 const String HEADER_5V = "3 - 5V Line";
 const String HEADER_12V = "4 - 12V Line";
 
-// Initialize LiquidCrystal library
-LiquidCrystal vLCD(1, 2, 3, 4, 5, 6); // FIXME: Modify with the correct the pins
+// Initialize LiquidCrystal library (auto detect i2c address)
+hd44780_I2Cexp lcd;
+
 
 /**
  * Read button state and increments the screen index in consequence
@@ -51,11 +56,11 @@ void readButtons(uint8_t *_aScreenIndex)
 void printLCD(String aLine1, String aLine2)
 {
     // Print first line
-    vLCD.setCursor(0, 0);
-    vLCD.print(aLine1);
+    lcd.setCursor(0, 0);
+    lcd.print(aLine1);
     // Print second line
-    vLCD.setCursor(1,0);
-    vLCD.print(aLine2);
+    lcd.setCursor(0,1);
+    lcd.print(aLine2);
 
 }
 
@@ -65,6 +70,7 @@ void printLCD(String aLine1, String aLine2)
  **/
 void printScreen(uint8_t aScreenIndex)
 {
+    lcd.clear();
     switch (aScreenIndex)
     {
     case (uint8_t)SCREEN_5V_USB:
@@ -93,10 +99,14 @@ void printScreen(uint8_t aScreenIndex)
  **/
 void boot()
 {
-    // TODO: Print boot message
-
-    // Wait 2 seconds
-    delay(2000);
+    // Print boot message
+    delay(1000);
+    lcd.setCursor(3,0);
+    lcd.print("A  M  P  S");
+    delay(1000);
+    lcd.setCursor(5,1);
+    lcd.print("<ZLab>");
+    delay(2500); // Wait 2,5s
 }
 
 /**
@@ -104,8 +114,9 @@ void boot()
  **/
 void setup()
 {
-    // TODO: Configure pins for LCD screen
-
+    // Set up the LCD's number of columns and rows
+    lcd.begin(16,2);
+    lcd.clear();
     // TODO: Configure pins for current sensors
 
     // TODO: Configure pins for the button
@@ -118,12 +129,18 @@ void setup()
  * Arduino main loop
  **/
 void loop()
-{
-    uint8_t vScreenIndex = SCREEN_5V; // Default screen is 5V
+{ 
+    // Test : Display all the screen
+    for(int i=0;i<4;i++)
+    {
+        printScreen(i);
+        delay(4000); // Wait 4s
+    }
+    // uint8_t vScreenIndex = SCREEN_5V; // Default screen is 5V
 
     // Print the selected screen
-    printScreen(vScreenIndex);
+    // printScreen(vScreenIndex);
 
     // Read button state and modify the screen variable
-    readButtons(&vScreenIndex);
+    // readButtons(&vScreenIndex);
 }
